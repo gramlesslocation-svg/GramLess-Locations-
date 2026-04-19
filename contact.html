@@ -99,6 +99,44 @@
       color:black;
     }
 
+/* WEBSITE BUTTON */
+.website{
+  background:linear-gradient(135deg,#f5c400,#ffdd55);
+  color:black;
+  font-weight:bold;
+  position:relative;
+  overflow:hidden;
+}
+
+/* shine effect */
+.website::after{
+  content:"";
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transform:rotate(25deg);
+  transition:0.5s;
+}
+
+.website:hover::after{
+  left:100%;
+  top:100%;
+}
+
+.website:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 10px 30px rgba(245,196,0,0.3);
+}
+
+
   </style>
 </head>
 
