@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GramLess Locations</title>
+
+  <style>
+    :root{
+      --black:#0d0d0d;
+      --yellow:#f5c400;
+      --white:#ffffff;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:var(--black);
+      color:var(--white);
+      animation:fadeIn 0.6s ease-in;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0;}
+      to{opacity:1;}
+    }
+
+    /* HEADER */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 25px;
+      background:#111;
+      position:sticky;
+      top:0;
+      z-index:10;
+      border-bottom:1px solid #222;
+    }
+
+    .title{
+      font-size:20px;
+      font-weight:bold;
+      color:var(--yellow);
+    }
+
+    .nav a{
+      text-decoration:none;
+      border:1px solid var(--white);
+      color:var(--white);
+      padding:8px 14px;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .nav a:hover{
+      background:var(--white);
+      color:black;
+    }
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      padding:60px 20px 20px;
+    }
+
+    .hero h1{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:15px;
+      color:#bbb;
+    }
+
+    /* MAP */
+    .map-container{
+      width:100%;
+      height:80vh;
+      padding:20px;
+    }
+
+    iframe{
+      width:100%;
+      height:100%;
+      border:none;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="title">GramLess</div>
+    <div class="nav">
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Find Our Locations</h1>
+    <p>Locate the nearest GramLess store quickly and easily.</p>
+  </div>
+
+  <!-- MAP -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Fy3yHoyB-n1PPJpd2Zi-wStoeRjqZS4&ehbc=2E312F"></iframe>
+  </div>
+
+</body>
+</html>
