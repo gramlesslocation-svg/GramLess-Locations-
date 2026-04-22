@@ -49,35 +49,47 @@
       color:var(--yellow);
     }
 
-    .nav a{
-      text-decoration:none;
-      border:1px solid var(--white);
-      color:var(--white);
-      padding:8px 14px;
-      border-radius:10px;
-      transition:0.3s;
-    }
+   /* HERO CARD STYLE */
+.hero {
+  text-align: center;
+  margin: 40px auto;
+  padding: 40px 25px;
+  max-width: 800px;
+  background: #1a1a1a; /* dark background like in screenshot */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
 
-    .nav a:hover{
-      background:var(--white);
-      color:black;
-    }
+/* Hero heading */
+.hero h1 {
+  font-size: 32px;
+  color: var(--white);
+  margin-bottom: 12px;
+}
 
-    /* HERO */
-    .hero{
-      text-align:center;
-      padding:60px 20px 20px;
-    }
+/* Hero description text */
+.hero p {
+  font-size: 16px;
+  color: #ccc;
+}
 
-    .hero h1{
-      font-size:30px;
-      margin-bottom:10px;
-    }
+/* Contact button gold/yellow */
+.nav a {
+  text-decoration: none;
+  border: 1px solid #f5c400; /* gold border */
+  color: #f5c400; /* gold text */
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
 
-    .hero p{
-      font-size:15px;
-      color:#bbb;
-    }
+.nav a:hover {
+  background: #f5c400; /* fill gold on hover */
+  color: black;
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #f5c400;
+}     
 
    .map-container{
   width:100%;
