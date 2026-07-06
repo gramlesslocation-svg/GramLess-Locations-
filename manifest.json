@@ -1,8 +1,11 @@
 {
-  "name": "Gramless Locations " ,
+  "name": "GramLess Locations " ,
   " short_name " : 
-  "Gramless",
-  "start_url" : "." ,
+  "GramLess",
+  "start_url": "/
+  GramLess-Locations-/",
+  "scope": "/
+  GramLess-Locations-/",
   "display": "stanalone" ,
   "background_color":
   "#000000" ,
