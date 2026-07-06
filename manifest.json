@@ -1,19 +1,16 @@
 {
-  "name": "GramLess Locations " ,
-  " short_name " : 
-  "GramLess",
-  "start_url": "/GramLess-Locations-/"
-  "scope": "/GramLess-Locations-/"
-  "display": "stanalone" ,
-  "background_color":
-  "#000000" ,
-  "theme_color",
-  "#000000" ,
-  "icons" : [
+  "name": "GramLess Locations",
+  "short_name": "GramLess",
+  "start_url": "/GramLess-Locations-/",
+  "scope": "/GramLess-Locations-/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
     {
-      "src" : "icon.png",
-      "sizes" : "512 * 512" ,
-      "type" : "image/png"
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
