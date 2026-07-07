@@ -21,15 +21,17 @@
   <title>GramLess Locations</title>
 
   <style>
-
+.map-container {
+  position: relative;
+}
 .map-hint {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 60px;
   background: rgba(0,0,0,0.9)
     color: white;
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
   font-size: 12px;
   z-index: 999;
   display: flex;
@@ -39,8 +41,9 @@
     .map-hint button{
       background: none;
       border: none;
-      color: #fff;
+      color: white;
       cursor: pointer;
+      font-size: 14px;
     }
 
     
@@ -166,30 +169,23 @@ iframe{
   <p>Locate the nearest GramLess store quickly and easily.</p>
 </div>
 
+  <div class= "map-container">
   <div id="mapHint"
 class="map-hint">
-    Tap to expand map
+    Tap here to expand map
     <button id="closeHint">X</button>
   </div>
     
   <div class="map-container">
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Fy3yHoyB-n1PPJpd2Zi-wStoeRjqZS4&ehbc=2E312F"></iframe>
   </div>
+  </div>
 
   <script>
-    const hint = document.getElementById("mapHint");
-    const closeBtn = document.getElementById("closeHint");
+    document.getElementById("closeHint").addEventListener("click", ()=> {
 
-    if
-      (localStorage.getItem("hideMapHint")) {
-        hint.style.display = "none" ;
-      }
-    closeBtn.addEventListener("click", () => {
-      hint.style.display= "none";
-
-      localStorage.setItem("hideMapHint", "true");
+      document.getElementById("mapHint").style.display = "none";
     });
-      
   </script>
 
 </body>
