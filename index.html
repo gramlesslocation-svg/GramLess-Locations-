@@ -21,31 +21,40 @@
   <title>GramLess Locations</title>
 
   <style>
-.map-container {
-  position: relative;
-}
 .map-hint {
   position: absolute;
-  top: 15px;
-  right: 60px;
-  background: rgba(0,0,0,0.9)
-    color: white;
+  top: 10px;
+  right: 15px;
+  background: #111;
+  color: white;
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 12px;
   z-index: 999;
   display: flex;
   align-items: center;
   gap: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
-    .map-hint button{
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      font-size: 14px;
-    }
 
+.map-hint::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: -6px;
+  width: 12px;
+  height: 12px;
+  background: #111;
+  transform: rotate(45deg);
+}
+
+.map-hint button {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+}
     
     :root{
       --black:#0d0d0d;
