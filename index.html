@@ -295,44 +295,56 @@ Follow us on Instagram • Facebook • TikTok
 </div>
 
 <script>
-let installPrompt;
+document.addEventListener("DOMContentLoaded", () => {
 
-const banner = document.getElementById("installBanner");
-const installBtn = document.getElementById("installBtn");
-const closeBtn = document.getElementById("closeInstall");
+    let installPrompt;
 
-window.addEventListener("beforeinstallprompt", (event) => {
-    event.preventDefault();
-    installPrompt = event;
-});
+    const banner = document.getElementById("installBanner");
+    const installBtn = document.getElementById("installBtn");
+    const closeBtn = document.getElementById("closeInstall");
 
-installBtn.addEventListener("click", async () => {
+    // Android install detection
+    window.addEventListener("beforeinstallprompt", (event) => {
+        event.preventDefault();
+        installPrompt = event;
+    });
 
-    if (installPrompt) {
-        installPrompt.prompt();
+    // Install button
+    installBtn.addEventListener("click", async () => {
 
-        await installPrompt.userChoice;
+        // Android
+        if (installPrompt) {
+            installPrompt.prompt();
 
-        installPrompt = null;
-    }
+            await installPrompt.userChoice;
 
-    else if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
-        alert(
-            "To install GramLess:\n\n" +
-            "1. Tap the Share button ⬆️\n" +
-            "2. Tap 'Add to Home Screen'\n" +
-            "3. Tap Add"
-        );
-    }
+            installPrompt = null;
+        }
 
-    else {
-        alert("Open your browser menu and choose 'Add to Home Screen'");
-    }
+        // iPhone / iPad
+        else if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
+            alert(
+                "To install GramLess:\n\n" +
+                "1. Tap the Share button ⬆️\n" +
+                "2. Tap 'Add to Home Screen'\n" +
+                "3. Tap Add"
+            );
+        }
 
-});
+        // Other devices
+        else {
+            alert(
+                "Open your browser menu and choose 'Add to Home Screen' to install GramLess."
+            );
+        }
 
-closeBtn.addEventListener("click", () => {
-    banner.style.display = "none";
+    });
+
+    // Close banner
+    closeBtn.addEventListener("click", () => {
+        banner.style.display = "none";
+    });
+
 });
 </script>
 
