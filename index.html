@@ -17,6 +17,52 @@
 
   <style>
 
+.install-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 420px;
+    background: #0d0d0d;
+    color: white;
+    border: 2px solid #f5c400;
+    border-radius: 18px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.install-banner p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #ddd;
+}
+
+.install-banner button {
+    border: none;
+    cursor: pointer;
+}
+
+#installBtn {
+    background: #f5c400;
+    color: black;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 12px;
+}
+
+#closeInstall {
+    background: transparent;
+    color: white;
+    font-size: 18px;
+}
+
+
+
 footer{
 
 padding:40px;
