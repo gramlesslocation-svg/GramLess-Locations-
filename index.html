@@ -283,8 +283,6 @@ Follow us on Instagram • Facebook • TikTok
     });
   </script>
 
-<script src="install.js"></script>
-
 
 <div id="installBanner" class="install-banner">
   <div>
@@ -294,6 +292,48 @@ Follow us on Instagram • Facebook • TikTok
   <button id="installBtn">Install</button>
   <button id="closeInstall">✕</button>
 </div>
+
+<script>
+let installPrompt;
+
+const banner = document.getElementById("installBanner");
+const installBtn = document.getElementById("installBtn");
+const closeBtn = document.getElementById("closeInstall");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    installPrompt = event;
+});
+
+installBtn.addEventListener("click", async () => {
+
+    if (installPrompt) {
+        installPrompt.prompt();
+
+        await installPrompt.userChoice;
+
+        installPrompt = null;
+    }
+
+    else if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
+        alert(
+            "To install GramLess:\n\n" +
+            "1. Tap the Share button ⬆️\n" +
+            "2. Tap 'Add to Home Screen'\n" +
+            "3. Tap Add"
+        );
+    }
+
+    else {
+        alert("Open your browser menu and choose 'Add to Home Screen'");
+    }
+
+});
+
+closeBtn.addEventListener("click", () => {
+    banner.style.display = "none";
+});
+</script>
 
 </body>
 </html>
