@@ -346,6 +346,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+if (window.matchMedia('(display-mode: standalone)').matches) {
+  document.getElementById("installBanner").style.display = "none";
+}
+
 </script>
 
 <script>
