@@ -138,14 +138,17 @@ color:var(--yellow);
 
     @keyframes hintGlow {
   0%, 100% {
-    text-shadow: none;
+    text-shadow:
+      0 0 2px rgba(245, 196, 0, 0.2);
   }
 
   50% {
     text-shadow:
-      0 0 5px #f5c400,
-      0 0 10px #f5c400,
-      0 0 18px rgba(245, 196, 0, 0.8);
+      0 0 4px #fff7a0,
+      0 0 8px #f5c400,
+      0 0 15px #f5c400,
+      0 0 25px rgba(245, 196, 0, 0.9),
+      0 0 40px rgba(245, 196, 0, 0.5);
   }
 }
     
