@@ -109,15 +109,23 @@ color:var(--yellow);
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-.map-hint::after {
-  content: "";
+
+.map-hint {
   position: absolute;
-  right: 18px;
-  bottom: -6px;
-  width: 12px;
-  height: 12px;
+  top: -5px;
+  right: 15px;
   background: #111;
-  transform: rotate(45deg);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+
+  animation: hintGlow 1.8s ease-in-out infinite;
 }
 
 .map-hint button {
@@ -126,6 +134,19 @@ color:var(--yellow);
   color: #aaa;
   font-size: 14px;
   cursor: pointer;
+}
+
+    @keyframes hintGlow {
+  0%, 100% {
+    text-shadow: none;
+  }
+
+  50% {
+    text-shadow:
+      0 0 5px #f5c400,
+      0 0 10px #f5c400,
+      0 0 18px rgba(245, 196, 0, 0.8);
+  }
 }
     
     :root{
